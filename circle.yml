@@ -19,3 +19,9 @@ machine:
     - echo "My middle name is ${MIDDLE_NAME}."
     - echo "Attempting to connect to database at ${DATABASE_URL}"
     - echo ${MIDDLE_NAME}
+
+
+### Customize dependencies
+dependencies:
+  pre:
+    - sudo apt-get install nmap htop # Install additional dependencies
