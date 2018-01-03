@@ -1,9 +1,20 @@
 ### Customize the test machine
 machine:
 
-  # Pre-setup steps.
+  # Custom pre-commands.
   pre:
-    - echo "Hello World"
+    - echo "Hello World" # Print a hello world message
+    - echo ${CIRCLE_BUILD_IMAGE} # Print the build image used for this build
 
   # Set timezone
   timezone: America/New_York
+
+  # Set custom environment variables.
+  environment:
+    DATABASE_URL: postgresql://ubuntu:@127.0.0.1:5432/circle_test
+    MIDDLE_NAME: Albrecht
+
+  # Custom post-commands.
+  post:
+    - echo "My middle name is ${MIDDLE_NAME}"
+    - echo "Attempting to connect to database at ${DATABASE_URL}"
