@@ -18,3 +18,5 @@ machine:
   post:
     - echo "My middle name is ${MIDDLE_NAME}"
     - echo "Attempting to connect to database at ${DATABASE_URL}"
+    - echo ${MIDDLE_NAME}"
+    - echo "Middle name is: $MIDDLE_NAME"
