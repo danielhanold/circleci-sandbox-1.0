@@ -1,0 +1,9 @@
+### Customize the test machine
+machine:
+
+  # Pre-setup steps.
+  pre:
+    - echo "Hello World"
+
+  # Set timezone
+  timezone: America/New_York
