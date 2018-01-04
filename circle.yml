@@ -19,7 +19,7 @@ machine:
     - echo "My middle name is ${MIDDLE_NAME}."
     - echo "Attempting to connect to database at ${DATABASE_URL}"
     - echo ${MIDDLE_NAME}
-
+r
 
 ### Customize dependencies
 dependencies:
@@ -39,4 +39,4 @@ database:
 ### Custom test parameters
 test:
   override:
-    - "true"
+    - ./vendor/bin/phpunit --bootstrap vendor/autoload.php tests/EmailTest
