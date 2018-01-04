@@ -25,3 +25,9 @@ machine:
 dependencies:
   pre:
     - sudo apt-get install nmap htop # Install additional dependencies
+
+
+### Custom test parameters
+test:
+  override:
+    - "true"
