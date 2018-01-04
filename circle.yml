@@ -27,6 +27,15 @@ dependencies:
     - sudo apt-get install nmap htop # Install additional dependencies
 
 
+### Install test data into a database
+# Default MySQL database does not use a password
+# Default database name (on Ubuntu): circle_test
+# Default database user (on Ubuntu): ubuntu
+database:
+  override:
+    - mysql -u ubuntu circle_test < fixture/database/mysql-dump.sql
+
+
 ### Custom test parameters
 test:
   override:
