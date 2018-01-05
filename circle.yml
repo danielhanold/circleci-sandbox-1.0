@@ -39,7 +39,9 @@ machine:
 dependencies:
   pre:
     - sudo apt-get install nmap htop # Install additional dependencies
-
+  override:
+    # Customize installation of NPM packages
+    - npm install
 
 ### Install test data into a database
 # Default MySQL database does not use a password
