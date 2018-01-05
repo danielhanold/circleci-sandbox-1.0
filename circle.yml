@@ -9,6 +9,10 @@ machine:
   # Set timezone
   timezone: America/New_York
 
+  # Adjust build machine host names.
+  hosts:
+    dev.myapplication.com: 127.0.0.1
+
   # Set custom environment variables.
   environment:
     DATABASE_URL: postgresql://ubuntu:@127.0.0.1:5432/circle_test
@@ -19,6 +23,7 @@ machine:
     - echo "My middle name is ${MIDDLE_NAME}."
     - echo "Attempting to connect to database at ${DATABASE_URL}"
     - echo ${MIDDLE_NAME}
+    - cat /etc/hosts
 
 
 ### Customize dependencies
