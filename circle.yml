@@ -39,9 +39,15 @@ machine:
 dependencies:
   pre:
     - sudo apt-get install nmap htop # Install additional dependencies
+  # Override dependency installation.
+  # Note that if this section is set, any and all steps to
+  # need to be set manually, i.e. the automatic detection
+  # by CircleCI will be completely circumvented.
   override:
     # Customize installation of NPM packages
     - npm install
+    # Install PHP packages
+    - composer install --no-interaction
 
 ### Install test data into a database
 # Default MySQL database does not use a password
