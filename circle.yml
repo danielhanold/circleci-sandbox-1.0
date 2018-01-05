@@ -18,6 +18,11 @@ machine:
     DATABASE_URL: postgresql://ubuntu:@127.0.0.1:5432/circle_test
     MIDDLE_NAME: Albrecht
 
+  # Configure services
+  services:
+    # Enable Elasticsearch
+    - elasticsearch
+
   # Configure PHP
   php:
     version: 7.1.9
