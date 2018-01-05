@@ -18,6 +18,10 @@ machine:
     DATABASE_URL: postgresql://ubuntu:@127.0.0.1:5432/circle_test
     MIDDLE_NAME: Albrecht
 
+  # Configure PHP
+  php:
+    version: 7.1.9
+
   # Custom post-commands.
   post:
     - echo "My middle name is ${MIDDLE_NAME}."
